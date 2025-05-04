@@ -1,1 +1,1 @@
-print("pussy")
+Lalala lili
