@@ -1,13 +1,29 @@
 import tkinter as tk
+from tkinter import messagebox
 
 def mostrar_classe_melee():
  texto_janela.delete(1.0, tk.END)
   texto_janela.insert(tk.END, 'O Guerreiro é uma classe focada no combate corpo a corpo, com grande resistência e dano físico.' ) 
 
-def mostrar_casse_ranged():
+def mostrar_calsse_ranged():
 texto_janela.delete(1.0, tk.END)
 texto_janela.insert(tk.END, 'O Atirador usa armas a distancia, como arcos, armas de fogo e armas de aremeço.')
 
+def mostrar_calsse_mage():
+ texto_janela.delete(1.0, tk.END)
+texto_janela.insert(tk.END, 'O Mago utiliza feitiços e magias para causar dano a distancia atraves de varios cajados forjados ou encontrados apos a derrota de certos mobs')
+
+def mostrar_calsse_Sumonner():
+ texto_janela.delete(1,0, tk.END)
+texto_janela.insert(tk.END, 'O Invocador usa criaturas magicas e chicotes para infligir dano, além do chicote causar dano ele também mostras as criatura invocadas qual mob ele deve atacar primeiro, da buff de dano as criaturas de acordo com o material)
+
+def buscar():
+termo = barra_busca.get()
+if termo:
+messegebox.showinfo("resultado da pesquisa", f"Você pesquisou por: {termo}")
+else:
+massegebox.showwarning("Aviso", "Digite um termo para pesquisar.")
+                    
 #Criando a janela
 janela = tk.Tk()
 janela.geometry('1920x1080')
@@ -28,11 +44,11 @@ botao_ranged = tk.Button(janela, text='Atirador', font=fonte, width=20, height=2
 botao_ranged.pack(pady=10)
 
 #Botao classe mage
-botao_mage = tk.Button(janela, text='Mago')
+botao_mage = tk.Button(janela, text='Mago', font=fonte, width=20, height2, bg="#800080", fg="FFFFFF", relief= "raised", command=mostrar_classe_mage)
 botao_mage.pack(pady=10)
 
 #Botao classe sumonner
-botao_sumonner = tk.Button(janela, text='Invocador')
+botao_sumonner = tk.Button(janela, text='Invocador', font=fonte, widht=20, height2, bg"#FFFF00", relief "raised", command=mostar_classe_sumonner)
 botao_sumonner.pack(pady=10)
 
 janela.mainloop()
