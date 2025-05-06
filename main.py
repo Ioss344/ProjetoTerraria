@@ -1,5 +1,13 @@
 import tkinter as tk
 
+def mostrar_classe_melee():
+ texto_janela.delete(1.0, tk.END)
+  texto_janela.insert(tk.END, 'O Guerreiro é uma classe focada no combate corpo a corpo, com grande resistência e dano físico.' ) 
+
+def mostrar_casse_ranged():
+texto_janela.delete(1.0, tk.END)
+texto_janela.insert(tk.END, 'O Atirador usa armas a distancia, como arcos, armas de fogo e armas de aremeço.')
+
 #Criando a janela
 janela = tk.Tk()
 janela.geometry('1920x1080')
@@ -12,11 +20,11 @@ texto_janela.insert(tk.END, 'Terraria é um jogo 2D sandbox extremamente caracte
 texto_janela.pack()
 
 #Botao classe meelee,
-botao_meelee = tk.Button(janela, text='Guerreiro', font=fonte, width=20, height=2, bg="#FF5733", fg="#FFFFFF", relief="raised", command=mostrar_classe melee )
+botao_meelee = tk.Button(janela, text='Guerreiro', font=fonte, width=20, height=2, bg="#FF5733", fg="#FFFFFF", relief="raised", command=mostrar_classe_melee)
 botao_meelee.pack(pady=10)
 
 #Botao classe ranged
-botao_ranged = tk.Button(janela, text='Atirador', font=fonte, width=20, height=2, bg="#2C3E50", fg="FFFFFF", relief= "raised", command=mostrar_classe ranged)
+botao_ranged = tk.Button(janela, text='Atirador', font=fonte, width=20, height=2, bg="#2C3E50", fg="FFFFFF", relief= "raised", command=mostrar_classe_ranged)
 botao_ranged.pack(pady=10)
 
 #Botao classe mage
