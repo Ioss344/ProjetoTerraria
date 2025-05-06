@@ -11,8 +11,8 @@ texto_janela.insert(tk.END, 'Bem-vindo ao guia para iniciantes no game Terraria!
 texto_janela.insert(tk.END, 'Terraria é um jogo 2D sandbox extremamente caracteristico e único, tendo o objetivo de derrotar chefões em uma ordem especifica com até quatro classes. Sendo elas:')
 texto_janela.pack()
 
-#Botao classe meelee
-botao_meelee = tk.Button(janela, text='Guerreiro')
+#Botao classe meelee,
+botao_meelee = tk.Button(janela, text='Guerreiro', font=fonte,whidth=20, heigt=2, bg="#FF5733", fg="#FFFFFF", relief=raised, command-mostrar_classe melee )
 botao_meelee.pack(pady=10)
 
 #Botao classe ranged
