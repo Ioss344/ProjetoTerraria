@@ -1,5 +1,25 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import tkk, messagebox
+
+def mostar_texto(texto_widget, conteudo):
+ texto_widget.delete("1.0", tk.END
+ texto_widget.insert(tk.END, conteudo)
+
+def buscar():
+ termo = barra_busca.get().strip().lower()
+ if not termo: 
+  mesagebox.showwarning("Aviso", "Digite um termo para pesquisar.")
+  return
+
+if "guerreiro" in termo:
+ notebook.select(aba_guerreiro)
+elif "atirador" in termo:
+ notebook.select(aba_atirador)
+elif "mago" in termo:
+ notebook.select(aba_mago)
+elif "invocador" in termo:
+ notebook.select(aba_invocador)
+else: messagebox.showinfo("resultado", "classe não encontrada,")
 
 def mostrar_classe_melee():
  texto_janela.delete(1.0, tk.END)
@@ -18,16 +38,40 @@ def mostrar_calsse_Sumonner():
 texto_janela.insert(tk.END, 'O Invocador usa criaturas magicas e chicotes para infligir dano, além do chicote causar dano ele também mostras as criatura invocadas qual mob ele deve atacar primeiro, da buff de dano as criaturas de acordo com o material)
 
 def buscar():
-termo = barra_busca.get()
-if termo:
-messegebox.showinfo("resultado da pesquisa", f"Você pesquisou por: {termo}")
+termo = barra_busca.get().strip().lower()
+if not termo:
+messegebox.showwarning("Aviso", "Digite um termo para pesquisar.")
+return
+if "guerreiro" in termo:
+mostrar_classe_melee()
+elif "atirador" in termo:
+mostrar_classe_ranged()
+elif "mago" in termo: 
+mostrar_classe_mage()
+elif "invocador" in termo:
+mostrar_classe_summoner():
 else:
-massegebox.showwarning("Aviso", "Digite um termo para pesquisar.")
+messagebox.showinfo("resultado", "classe não encontrada.")
                     
 #Criando a janela
 janela = tk.Tk()
 janela.geometry('1920x1080')
 janela.title('Projeto Terraria')
+
+Fonte = ("Arial",12)
+
+Notebook = tkk.notbook(janela)
+Notebook.pack(expand=True, fill='both')
+
+aba_inicio = tk .Frame(notebook)
+notebook.add(aba.inicio, text='Inicio')
+
+Texto_inicio = tk.Frame(notebook)
+notebook.add(aba_inicio, text='Inicio')
+
+texto_inicio = tk.Text(aba_inicio, wrap="word", font= fonte)
+text_inicio.insert(tk.END, " Bem-vindo ao guia para no game Terraria!/n/n"
+"Teraria é um jogo 2D sandbox único, onde você emfrenta chefes em uma ordem específica usando uma das quatro classes principais: /n" 
 
 #Texto da interface
 texto_janela = tk.Text(janela)
