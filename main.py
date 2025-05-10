@@ -58,6 +58,16 @@ janela = tk.Tk()
 janela.geometry('1920x1080')
 janela.title('Projeto Terraria')
 
+imagem = Image.open("Terraria.png")
+imagem = image.resize((800, 600))
+fundo = imageTkphotoImagem(imagem)
+
+fundo_label = tklabel(janela, imagem=fundo)
+fundo_label =place(x=0, y=0 relwidth=1, relheoght=1)
+
+container = Tk.frame(janela, bg="white")
+container.placer(relx=0.05, rely=0.05, relwidth=0.9, relheoght=0.9)
+
 Fonte = ("Arial",12)
 
 Notebook = tkk.notbook(janela)
